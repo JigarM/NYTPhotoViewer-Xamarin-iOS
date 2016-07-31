@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Example/Example.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Example/ViewController.cs">
+    <Files>
+      <File FileName="NYTPhotoViewer/ApiDefinition.cs" Line="627" Column="3" />
+      <File FileName="Example/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="Example/ViewController.cs" Line="12" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.NYTPhotoViewer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Example PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.877BCFF3-4682-4E49-925D-68B0A8043482" />
+</Properties>
