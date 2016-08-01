@@ -548,7 +548,7 @@ namespace NYTPhotoViewer
 	{
 		// @optional -(void)photosViewController:(NYTPhotosViewController * _Nonnull)photosViewController didNavigateToPhoto:(NYTPhoto * _Nonnull)photo atIndex:(NSUInteger)photoIndex;
 		[Export("photosViewController:didNavigateToPhoto:atIndex:")]
-		void PhotosViewController(NYTPhotosViewController photosViewController, NYTPhoto photo, nuint photoIndex);
+		void DidNavigateToPhotoAtIndex(NYTPhotosViewController photosViewController, NYTPhoto photo, nuint photoIndex);
 
 		// @optional -(void)photosViewControllerWillDismiss:(NYTPhotosViewController * _Nonnull)photosViewController;
 		[Export("photosViewControllerWillDismiss:")]
@@ -561,38 +561,38 @@ namespace NYTPhotoViewer
 		// @optional -(UIView * _Nullable)photosViewController:(NYTPhotosViewController * _Nonnull)photosViewController captionViewForPhoto:(NYTPhoto * _Nonnull)photo;
 		[Export("photosViewController:captionViewForPhoto:")]
 		[return: NullAllowed]
-		UIView PhotosViewController(NYTPhotosViewController photosViewController, NYTPhoto photo);
+		UIView CaptionViewForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo);
 
 		// @optional -(NSString * _Nullable)photosViewController:(NYTPhotosViewController * _Nonnull)photosViewController titleForPhoto:(NYTPhoto * _Nonnull)photo atIndex:(NSUInteger)photoIndex totalPhotoCount:(NSUInteger)totalPhotoCount;
 		[Export("photosViewController:titleForPhoto:atIndex:totalPhotoCount:")]
 		[return: NullAllowed]
-		string PhotosViewController(NYTPhotosViewController photosViewController, NYTPhoto photo, nuint photoIndex, nuint totalPhotoCount);
+		string TitleForPhotoWithTotalPhotoCount(NYTPhotosViewController photosViewController, NYTPhoto photo, nuint photoIndex, nuint totalPhotoCount);
 
 		// @optional -(UIView * _Nullable)photosViewController:(NYTPhotosViewController * _Nonnull)photosViewController loadingViewForPhoto:(NYTPhoto * _Nonnull)photo;
 		[Export("photosViewController:loadingViewForPhoto:")]
 		[return: NullAllowed]
-		UIView PhotosViewControllerLoadingViewForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo);
+		UIView LoadingViewForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo);
 
 		// @optional -(UIView * _Nullable)photosViewController:(NYTPhotosViewController * _Nonnull)photosViewController referenceViewForPhoto:(NYTPhoto * _Nonnull)photo;
 		[Export("photosViewController:referenceViewForPhoto:")]
 		[return: NullAllowed]
-		UIView PhotosViewControllerReferenceViewForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo);
+		UIView ReferenceViewForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo);
 
 		// @optional -(CGFloat)photosViewController:(NYTPhotosViewController * _Nonnull)photosViewController maximumZoomScaleForPhoto:(NYTPhoto * _Nonnull)photo;
 		[Export("photosViewController:maximumZoomScaleForPhoto:")]
-		nfloat PhotosViewControllerMaximumZoomScaleForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo);
+		nfloat MaximumZoomScaleForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo);
 
 		// @optional -(BOOL)photosViewController:(NYTPhotosViewController * _Nonnull)photosViewController handleLongPressForPhoto:(NYTPhoto * _Nonnull)photo withGestureRecognizer:(UILongPressGestureRecognizer * _Nonnull)longPressGestureRecognizer;
 		[Export("photosViewController:handleLongPressForPhoto:withGestureRecognizer:")]
-		bool PhotosViewControllerHandleLongPressForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo, UILongPressGestureRecognizer longPressGestureRecognizer);
+		bool HandleLongPressForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo, UILongPressGestureRecognizer longPressGestureRecognizer);
 
 		// @optional -(BOOL)photosViewController:(NYTPhotosViewController * _Nonnull)photosViewController handleActionButtonTappedForPhoto:(NYTPhoto * _Nonnull)photo;
 		[Export("photosViewController:handleActionButtonTappedForPhoto:")]
-		bool PhotosViewControllerHandleActionButtonTappedForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo);
+		bool HandleActionButtonTappedForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo);
 
 		// @optional -(void)photosViewController:(NYTPhotosViewController * _Nonnull)photosViewController actionCompletedWithActivityType:(NSString * _Nullable)activityType;
 		[Export("photosViewController:actionCompletedWithActivityType:")]
-		void PhotosViewController(NYTPhotosViewController photosViewController, [NullAllowed] string activityType);
+		void ActionCompletedWithActivityType(NYTPhotosViewController photosViewController, [NullAllowed] string activityType);
 	}
 
 	// @interface NYTScalingImageView : UIScrollView
