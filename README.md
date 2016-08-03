@@ -6,7 +6,7 @@ NYTPhotoViewer is a slideshow and image viewer that includes double-tap to zoom,
 ToDo (Working on)
 ==========
 + Working on Remote images
-+ Image Dismiss Animation : [Completed](https://github.com/JigarM/NYTPhotoViewer-Xamarin-iOS/commit/5f4cb21c1aa8a6eac3d8a7e9ace197358221c4b3)
++ ~~Image Dismiss Animation~~ : [Fixed](https://github.com/JigarM/NYTPhotoViewer-Xamarin-iOS/commit/5f4cb21c1aa8a6eac3d8a7e9ace197358221c4b3)
 + UI Alignment Issue
  
 # Author
