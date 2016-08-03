@@ -78,6 +78,8 @@ namespace Example
 		/// <returns>The touch up inside.</returns>
 		void btnTouchUpInside(object sender, EventArgs e)
 		{
+			UIButton button = (UIButton)sender;
+			
 			//NYTPhotos list
 			photos = new List<NYTPhoto>();
 
@@ -117,7 +119,7 @@ namespace Example
 			};
 
 			NYTPhotosViewController controller = new NYTPhotosViewController(photos.ToArray(), initial);
-			controller.Delegate = new NYTPhotosControllerDelegate();
+			controller.Delegate = new NYTPhotosControllerDelegate(button);
 			this.PresentViewController(controller, true, null);
 		}
 		#endregion
@@ -129,13 +131,20 @@ namespace Example
 		/// </summary>
 		public class NYTPhotosControllerDelegate : NYTPhotosViewControllerDelegate
 		{
+			#region Declaration
+
+			UIButton _button;
+
+			#endregion
+
 			#region Constructor
 
 			/// <summary>
 			/// Initializes a new instance of the <see cref="T:Example.ViewController.NYTPhotosControllerDelegate"/> class.
 			/// </summary>
-			public NYTPhotosControllerDelegate()
+			public NYTPhotosControllerDelegate(UIButton button)
 			{
+				_button = button;
 			}
 
 			#endregion
@@ -143,15 +152,28 @@ namespace Example
 			#region Override Methods
 
 			/// <summary>
-			/// Photoses the view controller maximum zoom scale for photo.
+			/// Maximums the zoom scale for photo.
 			/// </summary>
-			/// <returns>The view controller maximum zoom scale for photo.</returns>
+			/// <returns>The zoom scale for photo.</returns>
 			/// <param name="photosViewController">Photos view controller.</param>
 			/// <param name="photo">Photo.</param>
-			public override nfloat PhotosViewControllerMaximumZoomScaleForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo)
+			public override nfloat MaximumZoomScaleForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo)
 			{
 				return 5.0f;
 			}
+
+			/// <summary>
+			/// References the view for photo.
+			/// </summary>
+			/// <returns>The view for photo.</returns>
+			/// <param name="photosViewController">Photos view controller.</param>
+			/// <param name="photo">Photo.</param>
+			public override UIView ReferenceViewForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo)
+			{
+				//return base.ReferenceViewForPhoto(photosViewController, photo);
+				return _button;
+			}
+
 			#endregion
 		}
 

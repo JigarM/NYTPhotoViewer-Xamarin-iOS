@@ -93,6 +93,11 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\58x58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\120x120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\80x80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\57x57.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\11x114.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -112,12 +117,6 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NYTPhotoViewer\NYTPhotoViewer.csproj">
-      <Project>{8842F1B5-359D-45EB-8F76-70DD66AEFA96}</Project>
-      <Name>NYTPhotoViewer</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\NYTPhotoViewer.bundle\NYTPhotoViewerCloseButtonX.png" />
@@ -156,6 +155,13 @@
     <BundleResource Include="Resources\cartoon28.jpg" />
     <BundleResource Include="Resources\cartoon29.jpg" />
     <BundleResource Include="Resources\cartoon30.jpg" />
+    <BundleResource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NYTPhotoViewer\NYTPhotoViewer.csproj">
+      <Project>{8842F1B5-359D-45EB-8F76-70DD66AEFA96}</Project>
+      <Name>NYTPhotoViewer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
