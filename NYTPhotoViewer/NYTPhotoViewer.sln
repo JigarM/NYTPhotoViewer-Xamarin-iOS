@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NYTPhotoViewer", "NYTPhotoV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{4B928618-C95A-4AF5-BD2C-DFB73A1D4C52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NYTPhotoViewerWithRemoteImageSupport", "NYTPhotoViewerWithRemoteImageSupport\NYTPhotoViewerWithRemoteImageSupport.csproj", "{A587D6EF-3873-46DA-83E5-9C9850067BAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,5 +41,17 @@ Global
 		{4B928618-C95A-4AF5-BD2C-DFB73A1D4C52}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{4B928618-C95A-4AF5-BD2C-DFB73A1D4C52}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{4B928618-C95A-4AF5-BD2C-DFB73A1D4C52}.Debug|iPhone.Build.0 = Debug|iPhone
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Release|iPhone.Build.0 = Release|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{A587D6EF-3873-46DA-83E5-9C9850067BAF}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

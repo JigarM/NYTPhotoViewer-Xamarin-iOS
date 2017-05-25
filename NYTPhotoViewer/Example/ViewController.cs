@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Foundation;
-using NYTPhotoViewer;
+using NYTPhotoViewerWithRemoteImageSupport;
 using UIKit;
 
 namespace Example
@@ -100,19 +100,30 @@ namespace Example
 				var CaptionCreditAttrString = new NSAttributedString("NYT Xamarin iOS Binding Photo Credit: Jigar Maheshwari",
 				                                                     foregroundColor: UIColor.Gray, font: UIFont.PreferredCaption1);
 				
-				string imageName = "cartoon" + i + ".jpg";
+
+				//Remote images support
+				photos.Add(new NYTPhoto()
+				{
+					RemoteURL = "https://unsplash.it/700/1000?image="+i,
+					AttributedCaptionTitle = CaptionTitleAttrString,
+					AttributedCaptionSummary = CaptionSummaryAttrString,
+					AttributedCaptionCredit = CaptionCreditAttrString
+				});
+
+				//Local images should be use in this way.
+				/*string imageName = "cartoon" + i + ".jpg";
 				photos.Add(new NYTPhoto()
 				{
 					Image = UIImage.FromFile(imageName),
 					AttributedCaptionTitle = CaptionTitleAttrString,
 					AttributedCaptionSummary = CaptionSummaryAttrString,
 					AttributedCaptionCredit = CaptionCreditAttrString
-				});
+				});*/
 			}
 
 			NYTPhoto initial = new NYTPhoto()
 			{
-				Image = UIImage.FromFile("cartoon1.jpg"),
+				RemoteURL = "https://unsplash.it/700/1000?image=1",
 				AttributedCaptionTitle = attrString,
 				AttributedCaptionSummary = attrString,
 				AttributedCaptionCredit = attrString
@@ -170,7 +181,6 @@ namespace Example
 			/// <param name="photo">Photo.</param>
 			public override UIView ReferenceViewForPhoto(NYTPhotosViewController photosViewController, NYTPhoto photo)
 			{
-				//return base.ReferenceViewForPhoto(photosViewController, photo);
 				return _button;
 			}
 
