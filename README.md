@@ -1,4 +1,6 @@
 # NYTPhotoViewer-Xamarin-iOS
+![Support](https://img.shields.io/badge/Support-Xamarin-green.svg)
+
 NYTPhotoViewer is a slideshow and image viewer that includes double-tap to zoom, captions, support for multiple images, interactive flick to dismiss, animated zooming presentation, and more.
 
 ![Demo GIF](Video/NYTPhotoViewer.gif)
